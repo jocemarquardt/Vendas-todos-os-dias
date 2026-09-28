@@ -9,6 +9,7 @@
 | `roteiros/lote-2-clones.md` | 2 vídeos CLONE, modelados no concorrente mais escalado | Falta montar |
 | `concorrentes/` | Análise do concorrente e transcrições dos vídeos dele | Referência |
 | `vozes/` | Texto corrido de cada vídeo, pronto para o gerador de voz | Falta gerar o áudio |
+| `videos/tela-guia-9x16.mp4` | Rolagem do guia e dos 3 bônus (20 s, 1080x1920), para a cena de demonstração | ✅ Pronto para o CapCut |
 
 ### Imagens
 | Arquivo | Ângulo | Texto do anúncio |
