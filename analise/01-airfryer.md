@@ -34,12 +34,14 @@ As campanhas 1 a 6 têm **Idioma = English (US)**. O público é o Brasil, mas o
 Só isso já explica boa parte de qualquer resultado ruim nessas campanhas. As duas campanhas "Refresh" já vieram sem esse filtro, o que está certo.
 **Ação:** não reativar as campanhas 1 a 6. Se algum dia forem reaproveitadas, remover o idioma (ou colocar Português).
 
-### 2. 🔴 O orçamento está pulverizado demais para o algoritmo aprender
+> **Correção (depois de ler a skill `/automatico`):** os itens 2 e 3 abaixo não são erros. Pelo método @adsborba, a estrutura é proposital: 1 campanha por criativo, orçamento igual ao ticket, duplicada 1×, escalando por janelas de 2h. Mantenho o texto só como alternativa, caso esse método não funcione para este produto. Os erros reais em relação ao padrão da skill são: **idioma English (US)**, Advantage+ público desligado nas "Refresh", atribuição incompleta e falta de UTMs.
+
+### 2. (Alternativa ao método) O orçamento está pulverizado demais para o algoritmo aprender
 - São 8 campanhas de **R$ 27,90/dia**, o mesmo valor do produto.
 - A Meta precisa de cerca de **50 compras por semana por conjunto** para sair da fase de aprendizado. Com R$ 27,90/dia, cada conjunto consegue no máximo 1 venda por dia (e só se o custo por venda for igual ao preço, ou seja, sem lucro).
 - Resultado: nenhum conjunto aprende. As vendas ficam aleatórias (alguns dias vende, outros não), que é exatamente o contrário de "vender todos os dias".
 
-### 3. 🔴 Cópias idênticas competindo entre si
+### 3. (Alternativa ao método) Cópias idênticas competindo entre si
 "Clone" e "Clone (Copia)" usam o **mesmo público, o mesmo criativo e o mesmo texto**. Elas disputam o mesmo leilão e encarecem o CPM umas das outras. Além disso, duplicar e reiniciar campanhas (15/09, 16/09, 24/09) zera o aprendizado a cada vez.
 
 ### 4. 🟠 A conta não fecha com o preço atual
