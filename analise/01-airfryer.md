@@ -1,7 +1,10 @@
 # Análise: campanhas "365 Receitas pra Air Fryer"
 
-Fonte: exportação do Gerenciador de Anúncios de 28/09/2026 (`export_20260928_0828.csv`).
-Esse arquivo traz só as **configurações** das campanhas. Ele não tem resultados (gasto, cliques, compras).
+Fontes: exportações do Gerenciador de Anúncios de 28/09/2026 (`export_20260928_0828.csv` e `export_20260928_0838.csv`, com o mesmo conteúdo).
+Esses arquivos trazem só as **configurações** das campanhas. Eles não têm resultados (gasto, cliques, compras).
+
+**Resultado informado:** 4 vendas pela **Wiapy** → 4 × R$ 27,90 = **R$ 111,60 de faturamento bruto** (antes das taxas da Wiapy).
+Ainda falta o **valor total gasto** em anúncios para calcular o custo por venda e o retorno.
 
 ## O que existe hoje
 
@@ -16,10 +19,11 @@ Esse arquivo traz só as **configurações** das campanhas. Ele não tem resulta
 | 7 | AirFryer Refresh - Imagem-Direto-Preco | 24/09 | R$ 27,90 | conjunto | Imagem com o preço (anúncio pausado) | todos |
 | 8 | AirFryer Refresh - Video-Clone1-Refresh | 24/09 | R$ 27,90 | conjunto | Vídeo A, texto curto (anúncio pausado) | todos |
 
-Configuração igual em todas:
+Configuração comum:
 - Objetivo **Vendas**, otimizando para **Compra (Purchase)**, com a estratégia "maior volume".
-- Público: Brasil, 18 a 65 anos, **Público Advantage+ ligado**.
-- Somente celular. Posicionamentos manuais: Feed, Marketplace, Stories e Reels.
+- Público: Brasil, 18 a 65 anos. **Público Advantage+ ligado nas campanhas 1 a 6 e desligado nas 7 e 8.**
+- Somente celular. Posicionamentos manuais: Feed, Stories e Reels (as campanhas 1 a 6 também usam Marketplace e Explorar).
+- Atribuição: 7 dias clique + 1 dia visualização (campanhas 1 a 6); só 7 dias clique (7 e 8).
 - Página de destino: `https://365-receitas-air-fryer-br.vercel.app/`.
 - Produto: guia digital de R$ 27,90 + 3 bônus.
 
@@ -46,7 +50,9 @@ Só isso já explica boa parte de qualquer resultado ruim nessas campanhas. As d
 ### 5. 🟠 Página de destino em domínio `vercel.app`
 - Um domínio genérico passa menos confiança e não pode ser verificado na Meta. Isso limita a configuração de eventos (iOS/Conversions API).
 - **Ação:** registrar um domínio próprio (ex.: `365receitasairfryer.com.br`, cerca de R$ 40/ano), verificá-lo no Gerenciador de Negócios e configurar o evento Purchase com prioridade.
-- **Checar:** o pixel está disparando **Purchase na página de obrigado, com o valor 27,90**? Instale também a **API de Conversões** (Hotmart, Kiwify etc. têm integração nativa). Sem compras bem rastreadas, a otimização para compra não funciona.
+- **Checar (Wiapy):** o pixel da Meta está cadastrado **dentro do produto na Wiapy** e disparando **Purchase com o valor 27,90** quando a compra é aprovada? Se a Wiapy oferecer integração por **API de Conversões (token)**, ative também.
+- **Teste rápido:** compare as 4 vendas da Wiapy com a coluna "Compras" do Gerenciador. Se o Gerenciador mostrar menos de 4, o rastreamento está perdendo vendas e a Meta está otimizando "às cegas".
+- Com só 4 compras registradas, o pixel tem pouquíssimo sinal. Por isso a estrutura concentrada (abaixo) é ainda mais importante.
 
 ### 6. 🟡 Criativos
 - Existem só **3 vídeos + 1 imagem**, e 2 dos 3 vídeos usam o **mesmo texto** (A e C). Há pouca variação real para testar.
@@ -87,6 +93,8 @@ Para um conjunto novo com pouco orçamento, é melhor deixar o **Advantage+ Posi
 Esse arquivo não tem **resultados**. Para saber qual criativo vendeu e onde o funil trava, exporte o **relatório de desempenho**:
 Gerenciador de Anúncios → aba **Anúncios** → período **15/09 a 27/09** → Colunas: **Desempenho e cliques** + **Compras, Custo por compra, Finalizações de compra iniciadas, Visualizações da página de destino** → Exportar (.csv).
 
-Também preciso saber:
-- Qual plataforma de pagamento você usa (Hotmart, Kiwify, Eduzz…)?
-- Quantas vendas essas campanhas fizeram no total?
+Atenção: o botão **"Exportar"** do menu de edição em massa gera o arquivo de configurações (que já temos). Use **Relatórios → Exportar dados da tabela**, com as colunas de resultado visíveis na tela.
+
+Se for mais fácil, basta um **print da aba Campanhas** com as colunas *Valor usado, Compras, Custo por compra, CTR e CPC*, no período desde 15/09.
+
+Informações já recebidas: plataforma **Wiapy**, **4 vendas** no total.
