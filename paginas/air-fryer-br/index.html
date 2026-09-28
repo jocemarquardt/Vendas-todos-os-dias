@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>365 Receitas pra Air Fryer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<!-- META PIXEL: coloque o ID do seu pixel entre as aspas abaixo -->
+<script>
+  var META_PIXEL_ID = '';
+  if (META_PIXEL_ID) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_PIXEL_ID);
+    fbq('track', 'PageView');
+  }
+</script>
+<!-- UTMIFY: cole seu pixel aqui -->
+<style>
+  :root{
+    --bg:#fffaf3;
+    --card:#ffffff;
+    --ink:#2b2118;
+    --muted:#6b5d4f;
+    --orange:#ff6a1a;
+    --orange-dark:#e0500a;
+    --green:#2f9e5a;
+    --yellow:#ffcf4d;
+    --border:#f0e2cf;
+    --shadow: 0 10px 30px rgba(43,33,24,.08);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:600px;margin:0 auto;padding:0 18px;}
+  h1,h2,h3,.price,.headline-font{font-family:'Inter',sans-serif;}
+  img{max-width:100%;display:block;border-radius:14px;}
+  .btn{
+    display:block;width:100%;text-align:center;
+    background:linear-gradient(180deg,var(--orange),var(--orange-dark));
+    color:#fff;font-weight:800;font-size:17px;
+    padding:18px 16px;border-radius:14px;border:none;
+    text-decoration:none;box-shadow:0 8px 20px rgba(224,80,10,.35);
+    cursor:pointer;transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-sub{text-align:center;color:var(--muted);font-size:13px;margin-top:8px;}
+  .badge{
+    display:inline-block;background:var(--yellow);color:#5a4200;
+    font-weight:700;font-size:12px;padding:4px 10px;border-radius:999px;
+    letter-spacing:.02em;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:16px;padding:20px;box-shadow:var(--shadow);
+  }
+
+  /* STICKY BAR */
+  .sticky{
+    position:sticky;top:0;z-index:50;
+    background:var(--ink);color:#fff;
+    padding:10px 14px;text-align:center;font-size:13px;font-weight:600;
+  }
+  .sticky span{color:var(--yellow);font-family:'Space Grotesk',sans-serif;font-weight:700;}
+
+  /* HERO */
+  .hero{padding:26px 0 10px;text-align:center;}
+  .hero .badge{margin-bottom:14px;}
+  .hero h1{font-size:30px;line-height:1.15;margin:10px 0 8px;font-weight:700;}
+  .hero h1 em{color:var(--orange-dark);font-style:normal;}
+  .hero .sub{font-size:16px;color:var(--muted);margin-bottom:18px;}
+  .hero img{margin:14px 0;}
+  .stats{display:flex;justify-content:center;gap:18px;margin:16px 0 6px;font-size:13px;color:var(--muted);}
+  .stats b{display:block;color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:18px;}
+
+  /* SECTION SPACING */
+  section{padding:34px 0;}
+  section h2{font-size:23px;margin:0 0 6px;text-align:center;}
+  section .lead{text-align:center;color:var(--muted);margin-bottom:22px;font-size:15px;}
+
+  /* PAIN */
+  .pain-list{display:grid;gap:12px;}
+  .pain-item{
+    display:flex;gap:12px;align-items:flex-start;
+    background:var(--card);border:1px solid var(--border);
+    border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);
+  }
+  .pain-item .ic{
+    flex:none;width:26px;height:26px;border-radius:50%;
+    background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:700;
+  }
+  .pain-item p{margin:0;font-size:14.5px;line-height:1.45;}
+  .pain-item b{display:block;font-size:14.5px;margin-bottom:2px;}
+
+  /* GRID CARDS (o que recebe) */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .grid .card{padding:16px;text-align:center;}
+  .grid .emoji{font-size:26px;margin-bottom:8px;}
+  .grid h3{font-size:14.5px;margin:0 0 4px;}
+  .grid p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.4;}
+
+  /* TESTIMONIALS */
+  .testi{display:grid;gap:14px;}
+  .testi .card{padding:16px;}
+  .testi .stars{color:var(--yellow);font-size:14px;margin-bottom:6px;}
+  .testi .quote{font-size:14px;line-height:1.5;margin:0 0 10px;}
+  .testi .who{font-size:12.5px;color:var(--muted);font-weight:600;}
+
+  /* BONUS */
+  .bonus-item{
+    background:var(--card);border:1.5px dashed var(--orange);
+    border-radius:14px;padding:16px;margin-bottom:12px;
+  }
+  .bonus-item .tag{
+    display:inline-block;background:var(--orange);color:#fff;
+    font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;margin-bottom:8px;
+  }
+  .bonus-item h3{margin:0 0 4px;font-size:15.5px;}
+  .bonus-item p{margin:0 0 6px;font-size:13.5px;color:var(--muted);line-height:1.4;}
+  .bonus-item .was{text-decoration:line-through;color:#b3a08c;font-size:13px;}
+  .bonus-item .now{color:var(--green);font-weight:800;font-size:13px;}
+
+  /* PRICING */
+  .price-card{
+    background:linear-gradient(180deg,#fff,#fff7ec);
+    border:2px solid var(--orange);border-radius:18px;padding:22px 18px;text-align:center;
+    box-shadow:0 12px 30px rgba(255,106,26,.22);position:relative;margin-top:10px;
+  }
+  .price-card .most{
+    position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:var(--orange-dark);color:#fff;font-size:11.5px;font-weight:800;
+    padding:5px 14px;border-radius:999px;white-space:nowrap;
+  }
+  .price-card .anchor{color:#b3a08c;text-decoration:line-through;font-size:15px;}
+  .price .value{font-size:44px;font-weight:700;color:var(--ink);}
+  .price .cents{font-size:20px;vertical-align:top;}
+  .price-card .per{color:var(--muted);font-size:13px;margin-bottom:16px;}
+  .trust-row{display:flex;justify-content:center;gap:14px;margin-top:14px;font-size:11.5px;color:var(--muted);flex-wrap:wrap;}
+  .trust-row span{display:flex;align-items:center;gap:4px;}
+
+  /* GUARANTEE */
+  .guarantee{
+    display:flex;gap:16px;align-items:center;background:#f4fbf5;
+    border:1px solid #d3ecd8;border-radius:16px;padding:20px;
+  }
+  .guarantee .seal{
+    flex:none;width:68px;height:68px;border-radius:50%;
+    background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:26px;font-weight:800;
+  }
+  .guarantee h3{margin:0 0 6px;font-size:16.5px;}
+  .guarantee p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5;}
+
+  /* CHEF */
+  .chef{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow);}
+  .chef img{width:88px;height:88px;border-radius:50%;flex:none;object-fit:cover;border:3px solid var(--orange);}
+  .chef h3{margin:0 0 6px;font-size:16px;}
+  .chef p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5;}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--border);padding:14px 0;}
+  .faq-q{
+    display:flex;justify-content:space-between;align-items:center;
+    cursor:pointer;font-weight:700;font-size:14.5px;
+  }
+  .faq-q .plus{font-size:20px;color:var(--orange);transition:transform .2s;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;font-size:13.5px;color:var(--muted);line-height:1.5;}
+  .faq-item.open .faq-a{max-height:220px;padding-top:10px;}
+
+  /* CTA FINAL */
+  .final{
+    text-align:center;background:var(--ink);color:#fff;border-radius:20px;padding:30px 20px;
+  }
+  .final h2{color:#fff;}
+  .final p{color:#d8cdbe;font-size:14px;}
+  .final .btn{margin-top:16px;}
+
+  footer{padding:26px 0 60px;text-align:center;font-size:11.5px;color:var(--muted);line-height:1.6;}
+
+  /* DOWNSELL POPUP */
+  .overlay{
+    position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:100;
+    display:none;align-items:center;justify-content:center;padding:20px;
+  }
+  .overlay.show{display:flex;}
+  .popup{background:#fff;border-radius:18px;padding:24px;max-width:380px;text-align:center;}
+  .popup h3{margin-top:0;font-size:19px;}
+  .popup p{font-size:14px;color:var(--muted);}
+  .popup .close{margin-top:10px;font-size:12.5px;color:var(--muted);text-decoration:underline;cursor:pointer;background:none;border:none;}
+</style>
+</head>
+
+<!-- STICKY BAR -->
+<div class="sticky">🔥 Oferta relâmpago termina em <span id="timer">15:00</span></div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="badge">365 RECEITAS TESTADAS · ACESSO IMEDIATO</span>
+    <h1>Receitas para Airfryer: <em>o Fim do Delivery</em> e do "Não Sei o Que Fazer pro Jantar"</h1>
+    <p class="sub">Chega de fritar só batata. Descubra o guia completo com receitas testadas, sem óleo, prontas em minutos.</p>
+    <img src="assets/hero-air-fryer.jpg" alt="Pratos feitos na air fryer" width="900" height="900" fetchpriority="high">
+    <!-- Substituir por foto real: prato colorido saindo da air fryer, still de alta qualidade -->
+    <a href="#checkout" class="btn">QUERO MINHAS 365 RECEITAS AGORA</a>
+    <p class="btn-sub">Acesso imediato no celular. Pagamento único.</p>
+    <div class="stats">
+      <div><b>365</b>receitas</div>
+      <div><b>7 dias</b>de garantia</div>
+      <div><b>Vitalício</b>acesso</div>
+    </div>
+  </div>
+
+  <!-- DOR -->
+  <section>
+    <h2>Sua air fryer merece mais que batata frita</h2>
+    <p class="lead">Se alguma dessas frases já passou pela sua cabeça, esse guia foi feito pra você:</p>
+    <div class="pain-list">
+      <div class="pain-item"><div class="ic">✓</div><p><b>Chega de receita que não dá certo.</b>Sem mais tempo e temperatura errados — cada receita já vem testada e aprovada.</p></div>
+      <div class="pain-item"><div class="ic">✓</div><p><b>Crocante garantido.</b>Técnicas comprovadas pra nunca mais sair murcho ou queimado.</p></div>
+      <div class="pain-item"><div class="ic">✓</div><p><b>Sem mais dúvida na hora de cozinhar.</b>Tempo, temperatura e modo de preparo exatos, sem achismo.</p></div>
+      <div class="pain-item"><div class="ic">✓</div><p><b>Nunca mais erre.</b>Passo a passo simples que qualquer pessoa consegue seguir.</p></div>
+      <div class="pain-item"><div class="ic">✓</div><p><b>Receita pra todo gosto.</b>Das mais simples às mais elaboradas, pra nunca enjoar.</p></div>
+    </div>
+  </section>
+
+  <!-- O QUE VOCE RECEBE -->
+  <section>
+    <h2>O que você vai encontrar no guia</h2>
+    <p class="lead">365 receitas organizadas por categoria, prontas pra usar hoje mesmo</p>
+    <div class="grid">
+      <div class="card"><div class="emoji">🍗</div><h3>Carnes suculentas</h3><p>Frango, carne e peixe sempre no ponto certo</p></div>
+      <div class="card"><div class="emoji">🍞</div><h3>Pães e lanches</h3><p>Receitas rápidas pro café da manhã e lanche da tarde</p></div>
+      <div class="card"><div class="emoji">🍰</div><h3>Bolos e sobremesas</h3><p>Doces fofinhos sem precisar ligar o forno</p></div>
+      <div class="card"><div class="emoji">🥗</div><h3>Pratos saudáveis</h3><p>Menos óleo, mesmo sabor, mais leveza no dia a dia</p></div>
+      <div class="card"><div class="emoji">🌍</div><h3>Cozinha internacional</h3><p>Clássicos italianos, mexicanos e mais, do seu jeito</p></div>
+      <div class="card"><div class="emoji">⏱️</div><h3>Tempo e temperatura</h3><p>Tabela completa pra acertar todo prato de primeira</p></div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <!-- Quando tiver avaliações reais de clientes (com autorização), coloque aqui. -->
+  <section>
+    <h2>Como funciona</h2>
+    <div class="testi">
+      <div class="card">
+        <div class="stars" style="font-size:26px;font-weight:800;color:var(--orange)">1</div>
+        <p class="quote">Você recebe o acesso por e-mail e abre o guia no celular, tablet ou computador.</p>
+        <div class="who">Pronto em poucos minutos</div>
+      </div>
+      <div class="card">
+        <div class="stars" style="font-size:26px;font-weight:800;color:var(--orange)">2</div>
+        <p class="quote">Escolhe a receita do dia por categoria: carnes, pães, bolos, pratos saudáveis ou cozinha internacional.</p>
+        <div class="who">365 opções, uma pra cada dia</div>
+      </div>
+      <div class="card">
+        <div class="stars" style="font-size:26px;font-weight:800;color:var(--orange)">3</div>
+        <p class="quote">Segue o tempo e a temperatura exatos, passo a passo. Nada de comida murcha, crua ou queimada.</p>
+        <div class="who">Acerta de primeira</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUS -->
+  <section>
+    <h2>Comprando hoje, você ainda leva de bônus</h2>
+    <div class="bonus-item">
+      <span class="tag">BÔNUS 1</span>
+      <h3>Receitas Rápidas de Micro-ondas</h3>
+      <p>Pratos salgados e doces prontos em minutos, pros dias mais corridos.</p>
+      <span class="was">R$47</span> <span class="now">GRÁTIS hoje</span>
+    </div>
+    <div class="bonus-item">
+      <span class="tag">BÔNUS 2</span>
+      <h3>Sopas Low Carb</h3>
+      <p>Receitas quentinhas, saudáveis e cheias de sabor pra qualquer época do ano.</p>
+      <span class="was">R$37</span> <span class="now">GRÁTIS hoje</span>
+    </div>
+    <div class="bonus-item">
+      <span class="tag">BÔNUS 3</span>
+      <h3>Sobremesas Especiais na Air Fryer</h3>
+      <p>Doces fáceis e rápidos pra impressionar em qualquer ocasião.</p>
+      <span class="was">R$37</span> <span class="now">GRÁTIS hoje</span>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="checkout">
+    <h2>Garanta seu acesso agora</h2>
+    <p class="lead">Pagamento único. Sem mensalidade.</p>
+    <div class="price-card">
+      <span class="most">OFERTA DE HOJE</span>
+      <p class="per" style="margin:0 0 4px">Menos que um pedido de delivery</p>
+      <div class="price"><span class="value">R$27</span><span class="cents">,90</span></div>
+      <p class="per">à vista ou parcelado no cartão</p>
+      <a href="https://pay.wiapy.com/FAtga8pCFalZ" target="_blank" rel="noopener" class="btn cta-checkout">SIM, QUERO MINHAS 365 RECEITAS</a>
+      <p class="btn-sub">+ os 3 bônus grátis inclusos</p>
+      <div class="trust-row">
+        <span>🔒 Compra segura</span>
+        <span>♾️ Acesso vitalício</span>
+        <span>🛡️ Garantia 7 dias</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section>
+    <div class="guarantee">
+      <div class="seal">7d</div>
+      <div>
+        <h3>Risco zero: garantia de 7 dias</h3>
+        <p>Se por qualquer motivo você não gostar, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEF -->
+  <section>
+    <h2>Sobre a Chef Beatriz</h2>
+    <div class="chef">
+      <img src="assets/chef-beatriz.jpg" alt="Chef Beatriz" width="400" height="400" loading="lazy">
+      <!-- Substituir por foto real da chef: mulher sorrindo, uniforme de cozinha, fundo neutro -->
+      <div>
+        <h3>Chef especialista em air fryer</h3>
+        <p>A Chef Beatriz é cozinheira profissional com passagem por cozinhas renomadas pelo Brasil. Apaixonada por comida saborosa, saudável e prática, ela testou e aprovou cada uma das 365 receitas desse guia — pra garantir que você tenha sempre o resultado perfeito, sem complicação.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Como eu recebo o guia? <span class="plus">+</span></div>
+        <div class="faq-a">Assim que o pagamento for aprovado, você recebe o acesso completo por e-mail em poucos minutos. Pode abrir direto no celular, tablet ou computador.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Preciso ter experiência na cozinha? <span class="plus">+</span></div>
+        <div class="faq-a">Não! O guia foi feito pra qualquer pessoa, do iniciante ao mais experiente. Todas as receitas têm passo a passo simples e claro.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Por quanto tempo eu tenho acesso? <span class="plus">+</span></div>
+        <div class="faq-a">O acesso é vitalício. Você paga uma vez só e o guia é seu pra sempre, sem mensalidade.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Os ingredientes são fáceis de achar? <span class="plus">+</span></div>
+        <div class="faq-a">Sim! Todas as receitas usam ingredientes simples, que você encontra em qualquer mercado.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">E se eu não gostar? <span class="plus">+</span></div>
+        <div class="faq-a">Você tem 7 dias de garantia. Se não gostar por qualquer motivo, devolvemos seu dinheiro sem perguntas.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Tem mensalidade? <span class="plus">+</span></div>
+        <div class="faq-a">Não. É pagamento único. Sem taxa escondida, sem cobrança recorrente.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section>
+    <div class="final">
+      <h2>Quantas vezes você já tentou uma receita na air fryer e não deu certo?</h2>
+      <p>Com as 365 receitas testadas desse guia, isso não acontece mais. Comece hoje e descubra tudo que sua air fryer pode fazer.</p>
+      <a href="https://pay.wiapy.com/FAtga8pCFalZ" target="_blank" rel="noopener" class="btn cta-checkout">QUERO GARANTIR MINHA OFERTA</a>
+    </div>
+  </section>
+
+  <footer>
+    Este produto não garante resultados específicos. Os resultados podem variar de pessoa pra pessoa.<br>
+    © 365 Receitas pra Air Fryer — Todos os direitos reservados.
+  </footer>
+</div>
+
+<!-- POPUP DOWNSELL (placeholder — sem uso nesse clone de plano unico) -->
+<div class="overlay" id="overlay">
+  <div class="popup">
+    <h3>Espera! 🙋‍♀️</h3>
+    <p>Antes de sair, que tal garantir sua oferta com um desconto exclusivo?</p>
+    <a href="https://pay.wiapy.com/FAtga8pCFalZ" target="_blank" rel="noopener" class="btn cta-checkout">SIM, QUERO O DESCONTO</a>
+    <button class="close" onclick="document.getElementById('overlay').classList.remove('show')">Não, obrigada</button>
+  </div>
+</div>
+
+<script>
+  // Timer regressivo de 15 min.
+  // Recomeça quando zera e quando o celular reabre a aba, pra nunca mostrar "00:00".
+  (function(){
+    var duration = 15*60;
+    var el = document.getElementById('timer');
+    var end;
+    function start(){ end = Date.now() + duration*1000; }
+    function tick(){
+      var left = Math.floor((end-Date.now())/1000);
+      if (left <= 0) { start(); left = duration; }
+      var m = String(Math.floor(left/60)).padStart(2,'0');
+      var s = String(left%60).padStart(2,'0');
+      el.textContent = m+':'+s;
+    }
+    start(); tick();
+    setInterval(tick, 1000);
+    window.addEventListener('pageshow', function(e){ if (e.persisted) { start(); tick(); } });
+  })();
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      q.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Eventos de pixel (preencher quando colar Meta Pixel / Utmify acima)
+  document.querySelectorAll('a.cta-checkout, a[href="#checkout"]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (typeof fbq === 'function') { fbq('track', 'InitiateCheckout'); }
+    });
+  });
+</script>
+</html>
