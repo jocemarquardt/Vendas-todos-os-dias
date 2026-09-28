@@ -1,0 +1,12 @@
+config-automatico.json
+mineracao/
+analises/
+produtos/
+entregaveis/
+funis/
+criativos/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
